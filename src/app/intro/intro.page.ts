@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Storage } from '@ionic/storage-angular';
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.page.html',
@@ -11,55 +11,56 @@ export class IntroPage implements OnInit {
   slides = [
     {
 
-      title: "Animal Uno",
-      img: "https://www.zooplus.es/magazine/wp-content/uploads/2021/06/Lombrices-en-gatitos.jpg",
+      title: "Pandora Music",
+      img: "assets/images/pandora9.png",
       icon: "caret-forward-outline",
-      description: "Hola soy el animal numero 1"
+      description: "Te brindamos una experiencia auditiva personalizada que evoluciona continuamente con tu gusto."
 
     },
 
     {
 
-      title: "Animal Secundario",
-      img: "assets/images/imag1.jpg",
-      icon: "navigate-outline",
-      description: "Hola soy el animal numero 2"
+      title: "Pandora Music",
+      img: "assets/images/pandora7.jpg",
+      icon: "caret-forward-outline",
+      description: "Crea estaciones a partir de sus canciones, artistas o géneros favoritos"
 
     },
     {
 
-      title: "Animal Tercero",
-      img: "assets/images/imag2.jpg",
-      icon: "play-forward-outline",
-      description: "Hola soy el animal numero 3"
+      title: "Pandora Music",
+      img: "assets/images/pandora6.jpg",
+      icon: "caret-forward-outline",
+      description: "Descarganos desde tu App Store"
 
     },
     {
 
-      title: "Animal Cuarto",
-      img: "assets/images/imag3.jpg",
-      icon: "swap-horizontal-outline",
-      description: "Hola soy el animal numero 4"
+      title: "Pandora Music",
+      img: "assets/images/pandora3.jpg",
+      icon: "caret-forward-outline",
+      description: "Comienza a disfrutar de la mejor musica"
 
     },
     {
 
-      title: "Animal Quinto",
-      img: "assets/images/imag4.jpg",
-      icon: "return-up-back-outline",
-      description: "Hola soy el animal numero 5"
+      title: "Pandora Music",
+      img: "assets/images/pandora4.png",
+      icon: "caret-forward-outline",
+      description: "Estamos disponible en multiples plataformas"
 
     }
 
 
   ]
-  constructor(private router: Router) { }
+  constructor(private router: Router, private storage: Storage) { }
 
   ngOnInit() {
   }
 
   finish() {
-    this.router.navigateByUrl("/home");
+    this.storage.set("introShow", true);
+    this.router.navigateByUrl("/menu/home");
 
   }
 

@@ -74,7 +74,33 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+  --ion-color-variablecolor: #fcff38;
+	--ion-font-size-variablesize: 20px;
+  --text-align-variablecentrar: center;
 }
+ion-input{
+
+ text-align: center;
+}
+
+ion-button {
+ 
+  --border-color: #000;
+  --border-style: solid;
+  --border-width: 1px;
+  
+}
+
+ion-content.background{
+  --background: url(../assets/images/imagenfondo.jpeg);
+ 
+}
+
+
+
+
 
 @media (prefers-color-scheme: dark) {
   /*

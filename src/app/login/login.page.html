@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="end">
+      
+      <ion-button>
+        <ion-icon name="log-in-outline"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+    <ion-item class="correo">
+      <ion-input label="Email" type="email" labelPlacement="floating" placeholder="name@example.com"
+        formControlName="email"></ion-input>
+    </ion-item>
+
+    <div class="alerta1" >
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div *ngIf="(
+        loginForm.get('email')?.hasError(validation.type) && 
+        loginForm.get('email')?.dirty) 
+      ">
+          {{validation.message}}
+        </div>
+
+      </ng-container>
+    </div>
+
+    <ion-item class="pass">
+      <ion-input label="Password" type="password" labelPlacement="floating" placeholder="******" formControlName="password"></ion-input>
+    </ion-item>
+
+    <div class="alerta1">
+      <ng-container *ngFor="let validation of validation_messagespass.password">
+        <div *ngIf="(
+        loginForm.get('password')?.hasError(validation.type)
+        && 
+        loginForm.get('password')?.dirty)
+        
+        
+      ">
+          {{validation.message}}
+          
+        </div>
+
+      </ng-container>
+    </div>
+
+
+    <ion-button class="btningresar"
+     expand="full" 
+     shape="round"
+     color="secondary"
+     [disabled]="!loginForm.valid"
+     type="submit">
+      Ingresar
+    </ion-button>
+
+  </form>
+
+  <ion-footer>
+    <ion-button class="btnregistrar"
+     expand="full" 
+     shape="round" 
+     color="success" 
+     (click)="goToRegister()
+     ">
+
+      Registrarse
+    </ion-button>
+  </ion-footer>
+</ion-content>

@@ -1,0 +1,44 @@
+.correo2 {
+    position: absolute;
+    top: 90px;
+    left: 70px;
+}
+
+.pass2 {
+    position: absolute;
+    top: 150px;
+    left: 70px;
+}
+.nombre {
+    position: absolute;
+    top: 210px;
+    left: 70px;
+}
+
+.apellido {
+    position: absolute;
+    top: 270px;
+    left: 70px;
+}
+.btningresar2 {
+    position: absolute;
+    top: 340px;
+    left: 110px;
+}
+
+.btnatras {
+    position: absolute;
+    top: 395px;
+    left: 150px;
+    background: --ion-color-primary;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+    color: var(--ion-color-light);
+}
+
+.alerta2{
+    color: var(--ion-color-variablecolor);
+    font-size: var(--ion-font-size-variablesize);
+    text-align: var(--text-align-variablecentrar);
+}

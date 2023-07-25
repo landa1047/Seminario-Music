@@ -1,17 +1,24 @@
 .slide-icon {
     font-size: 35px;
+    color: var(--ion-color-light);
   }
+  h1 {
+    color: var(--ion-color-light);
+    text-align: center;
+  }
+ 
   
   .title{
-  
-    text-shadow: 1px 1px 1px aqua;
     text-align: center;
   }
   
   .letra {
     font-size: 1.4rem;
     font-family: Helvetica, Arial, sans-serif;
-    text-shadow: 1px 1px 1px red;
+    //text-shadow: 1px 1px 1px white;
+    color: var(--ion-color-light);
+    text-align: justify;
+   
   }
 
   .imagenes2{ 
@@ -23,8 +30,15 @@
 
   .close-icon{
     
-    font-size: 40px;
-    color: red;
+    font-size: 20px;
+    color: var(--ion-color-light);
     display: block;
     margin-left: auto;
+    
   }
+  .btnintro{
+    background: --ion-color-primary;
+    color: var(--ion-color-light);
+
+  }
+

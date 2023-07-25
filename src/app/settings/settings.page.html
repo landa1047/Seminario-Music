@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+
+      <ion-title>
+        Configuracion
+      </ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-avatar (click)="takePhoto()" class="center-avatar">
+    <img [src]="userImage" *ngIf="!photo" />
+    <img [src]="photo" *ngIf="photo" />
+  </ion-avatar>
+  <h1 class="letra">Andres Herrera</h1>
+  <h2 class="letra">andresh.g@hotmail.es</h2>
+  <ion-grid>
+    <ion-row class="letra">
+      <ion-col>100</ion-col>
+      <ion-col>25</ion-col>
+      <ion-col>123</ion-col>
+    </ion-row>
+    <ion-row class="letra">
+      <ion-col>Artistas</ion-col>
+      <ion-col>Seguidores</ion-col>
+      <ion-col>Canciones</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

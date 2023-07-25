@@ -1,22 +1,42 @@
 <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Siguenos
+    </ion-title>
+    <ion-buttons slot="end">
+
+      <ion-button>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-icon name="close" class="close-icon"(click)='finish()'></ion-icon>
-  <swiper-container 
-  [initialSlide]="0"
-  [slidesPerView]="1"
-  [speed]="4000"
-  >
+<ion-content class="background">
+  <ion-icon name="close" class="close-icon" (click)='finish()'></ion-icon>
+  <swiper-container [initialSlide]="0" [slidesPerView]="1" [speed]="400">
 
     <swiper-slide *ngFor="let slide of slides">
-      <h1 class="title">{{slide.title}}</h1>
-      <img class="imagenes2" src={{slide.img}}/>
+      <h1 class="my-favorite-text-color">{{slide.title}}</h1>
+      <img class="imagenes2" src={{slide.img}} />
       <ion-icon class="slide-icon" name="{{slide.icon}}"></ion-icon>
       <p class="letra">{{slide.description}}</p>
-    </swiper-slide>
 
-    
+
+      <ion-buttons>
+        <ion-button shape="round" class="btnintro" (click)='finish()'>
+
+          Buscar Canciones
+        </ion-button>
+      </ion-buttons>
+
+    </swiper-slide>
 
   </swiper-container>
 </ion-content>
